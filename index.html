@@ -1,0 +1,441 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lenguaje de Marcas - 1º DAM</title>
+
+    <!-- ESTILOS CSS -->
+    <style>
+
+        /* ESTILOS GENERALES */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f4f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* CABECERA */
+
+        header {
+            background-color: #263849;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        header h1 {
+            margin-bottom: 5px;
+        }
+
+        /* CONTENEDOR PRINCIPAL */
+
+        .contenedor {
+            display: flex;
+            align-items: stretch;
+            gap: 25px;
+            padding: 25px;
+        }
+
+        /* MENU LATERAL */
+
+        aside {
+            background-color: #34495e;
+            color: white;
+            width: 260px;
+            flex-shrink: 0;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        aside h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        aside section {
+            margin-bottom: 30px;
+        }
+
+        aside ul {
+            list-style: none;
+        }
+
+        aside li {
+            margin-bottom: 15px;
+        }
+
+        aside a {
+            color: #dce6f0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        aside a:hover {
+            color: #f1c40f;
+        }
+
+        /* CONTENIDO PRINCIPAL */
+
+        main {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .bienvenida,
+        article {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+        }
+
+        main h2 {
+            color: #263849;
+            margin-bottom: 15px;
+        }
+
+        article {
+            scroll-margin-top: 20px;
+        }
+
+        article p {
+            margin-bottom: 15px;
+        }
+
+        /* ACTIVIDAD 01: MODELO DE CAJAS */
+
+        .ejemplo-caja {
+            background-color: #eaf2f8;
+            padding: 25px;
+            border: 3px dashed #3498db;
+            margin: 20px 0;
+        }
+
+        .caja {
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            border: 5px solid #21618c;
+        }
+
+        /* ACTIVIDAD 02: FLEXBOX */
+
+        .ejemplo-flex {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 10px;
+            background-color: #eaf2f8;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .ejemplo-flex div {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        /* ACTIVIDAD 03: CSS GRID */
+
+        .ejemplo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .ejemplo-grid div {
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            border-radius: 5px;
+        }
+
+        /* NOTAS */
+
+        .nota {
+            color: #777;
+            font-style: italic;
+            font-size: 14px;
+        }
+
+        /* PIE DE PAGINA */
+
+        footer {
+            background-color: #263849;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* ADAPTACION A MOVILES */
+
+        @media (max-width: 768px) {
+
+            .contenedor {
+                flex-direction: column;
+            }
+
+            aside {
+                width: 100%;
+            }
+
+            .ejemplo-flex {
+                flex-wrap: wrap;
+            }
+
+            .ejemplo-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- CABECERA -->
+
+    <header>
+
+        <h1>Lenguaje de Marcas - 1º DAM</h1>
+
+        <p>Mi proyecto de actividades</p>
+
+    </header>
+
+
+    <!-- CONTENEDOR PRINCIPAL -->
+
+    <div class="contenedor">
+
+
+        <!-- MENU LATERAL -->
+
+        <aside>
+
+            <section>
+
+                <h2>Alumno/a</h2>
+
+                <p>Nombre: Tu nombre</p>
+
+                <p>Curso: 1º DAM</p>
+
+                <p>Asignatura: Lenguaje de Marcas</p>
+
+            </section>
+
+
+            <nav>
+
+                <h2>Mis actividades</h2>
+
+                <ul>
+
+                    <li>
+                        <a href="#act-cajas">
+                            01. Modelo de Cajas
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#act-flexbox">
+                            02. Flexbox
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#act-grid">
+                            03. CSS Grid
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- CONTENIDO PRINCIPAL -->
+
+        <main>
+
+
+            <!-- BIENVENIDA -->
+
+            <section class="bienvenida">
+
+                <h2>Bienvenido/a a mi proyecto</h2>
+
+                <p>
+                    En esta página se recopilan las actividades
+                    realizadas durante la asignatura de
+                    Lenguaje de Marcas de 1º DAM.
+                </p>
+
+                <p>
+                    Utiliza el menú lateral para acceder
+                    directamente a cada una de las actividades.
+                </p>
+
+            </section>
+
+
+            <!-- ACTIVIDAD 01 -->
+
+            <article id="act-cajas">
+
+                <h2>Actividad 01: Modelo de Cajas</h2>
+
+                <p>
+                    En esta actividad trabajamos el modelo
+                    de cajas de CSS, aprendiendo cómo se
+                    organiza el espacio de los elementos
+                    de una página web.
+                </p>
+
+                <p>
+                    El modelo de cajas está compuesto por
+                    cuatro partes: contenido, padding,
+                    border y margin.
+                </p>
+
+                <div class="ejemplo-caja">
+
+                    <div class="caja">
+                        CONTENIDO
+                    </div>
+
+                </div>
+
+                <p class="nota">
+                   <a href="actividad 1 lenguaje/index.html">
+                    actividad 1
+                   </a>
+                </p>
+
+            </article>
+
+
+            <!-- ACTIVIDAD 02 -->
+
+            <article id="act-flexbox">
+
+                <h2>Actividad 02: Flexbox</h2>
+
+                <p>
+                    En esta actividad aprendimos a utilizar
+                    Flexbox para organizar y distribuir
+                    elementos dentro de un contenedor.
+                </p>
+
+                <p>
+                    Flexbox permite alinear elementos
+                    horizontalmente o verticalmente y
+                    distribuir el espacio disponible.
+                </p>
+
+                <div class="ejemplo-flex">
+
+                    <div>Elemento 1</div>
+
+                    <div>Elemento 2</div>
+
+                    <div>Elemento 3</div>
+
+                </div>
+
+                <p class="nota">
+                    <a href="actividad 2 lenguaje/index.html">
+                    actividad 2
+                    </a>
+                </p>
+
+            </article>
+
+
+            <!-- ACTIVIDAD 03 -->
+
+            <article id="act-grid">
+
+                <h2>Actividad 03: CSS Grid</h2>
+
+                <p>
+                    En esta actividad trabajamos CSS Grid,
+                    un sistema de diseño que permite
+                    organizar elementos mediante filas
+                    y columnas.
+                </p>
+
+                <p>
+                    Grid facilita la creación de estructuras
+                    y distribuciones de contenido en
+                    páginas web.
+                </p>
+
+                <div class="ejemplo-grid">
+
+                    <div>1</div>
+
+                    <div>2</div>
+
+                    <div>3</div>
+
+                    <div>4</div>
+
+                    <div>5</div>
+
+                    <div>6</div>
+
+                </div>
+
+                <p class="nota">
+                    <a href="actividad 3 lenguaje/index.html">
+                    actividad 3
+                    </a>
+                </p>
+
+            </article>
+
+        
+
+        </main>
+
+    </div>
+
+
+    <!-- PIE DE PAGINA -->
+
+    <footer>
+
+        <p>Proyecto de Lenguaje de Marcas - 1º DAM</p>
+
+        <p>Realizado por: Adrian Laprida Rojas</p>
+
+    </footer>
+
+</body>
+
+</html>
